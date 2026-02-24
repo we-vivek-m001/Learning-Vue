@@ -10,7 +10,11 @@
 
 <TemplateSyntax/> 
 <ComputedComponent/>
-
+<ClassComponent/>
+<StyleComponent/>
+<ConditionalComponent/>
+<ListRendering/>
+<EventHandling/>
 </template>
 
 
@@ -19,6 +23,11 @@
 import { ref, reactive} from 'vue';
 import TemplateSyntax from './components/TemplateSyntax.vue';
 import ComputedComponent from './components/ComputedComponent.vue';
+import ClassComponent from './components/ClassComponent.vue';
+import StyleComponent from './components/StyleComponent.vue';
+import ConditionalComponent from './components/ConditionalComponent.vue'
+import ListRendering from './components/ListRendering.vue';
+import EventHandling from './components/EventHandling.vue';
 const counter = ref(10);
 const counterData = reactive({
   count: 0,
