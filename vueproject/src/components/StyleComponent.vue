@@ -2,7 +2,11 @@
      <h3> style binding</h3>
     <div :style="{color:activeColor, 'font-size': fontSize +'px'}">applying style</div>
     <div :style="styleObject">Apply style through reactive </div>
+
+    
 </template>
+  
+
 
 
  <script setup>

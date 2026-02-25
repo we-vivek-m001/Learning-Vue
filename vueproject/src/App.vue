@@ -15,6 +15,9 @@
 <ConditionalComponent/>
 <ListRendering/>
 <EventHandling/>
+<FormInput/>
+<WatchComponent/>
+<WatchEffectComponent/>
 </template>
 
 
@@ -28,6 +31,9 @@ import StyleComponent from './components/StyleComponent.vue';
 import ConditionalComponent from './components/ConditionalComponent.vue'
 import ListRendering from './components/ListRendering.vue';
 import EventHandling from './components/EventHandling.vue';
+import FormInput from './components/formInput.vue';
+import WatchComponent from './components/WatchComponent.vue';
+import WatchEffectComponent from './components/WatchEffectComponent.vue';
 const counter = ref(10);
 const counterData = reactive({
   count: 0,
