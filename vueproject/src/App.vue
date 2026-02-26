@@ -9,6 +9,8 @@
 
 
 <TemplateSyntax/> 
+
+<ParentComponent/>
 <ComputedComponent/>
 <ClassComponent/>
 <StyleComponent/>
@@ -18,6 +20,11 @@
 <FormInput/>
 <WatchComponent/>
 <WatchEffectComponent/>
+<SinglePost 
+  :postTitle="title" 
+  :id="postId" 
+  :postDetail="postDetails"
+/>
 </template>
 
 
@@ -33,15 +40,24 @@ import ListRendering from './components/ListRendering.vue';
 import EventHandling from './components/EventHandling.vue';
 import FormInput from './components/formInput.vue';
 import WatchComponent from './components/WatchComponent.vue';
-import WatchEffectComponent from './components/WatchEffectComponent.vue';
+//import WatchEffectComponent from './components/WatchEffectComponent.vue';
+import SinglePost from './components/SinglePost.vue';
+import ChildComponent from './components/ChildComponent.vue';
+import ParentComponent from './components/ParentComponent.vue';
 const counter = ref(10);
 const counterData = reactive({
   count: 0,
   title: 'counter 1title'
 });
 
+const postId = ref(42);
+const title = ref("learning vue")
 const counterTitle = ref('Counter title');
+const postDetails = {
+  title: "again leraning Vue",
+  id:34
 
+}
 
 
 function increase(){

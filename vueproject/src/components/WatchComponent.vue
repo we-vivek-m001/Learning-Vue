@@ -39,7 +39,7 @@ const y = ref(0);
 
 watch(x, (newX)=>{
     console.log(`value of x is ${newX}`);
-});
+},{immediate:true});
 
 const obj = reactive(
     {count:0,
