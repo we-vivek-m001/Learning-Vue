@@ -8,8 +8,7 @@
 <input type="text" v-model="counterTitle"/>
 
 
-<TemplateSyntax/> 
-
+<!-- <TemplateSyntax/> 
 <ParentComponent/>
 <ComputedComponent/>
 <ClassComponent/>
@@ -24,7 +23,34 @@
   :postTitle="title" 
   :id="postId" 
   :postDetail="postDetails"
-/>
+/> -->
+
+<SlotComponent>slot 
+  <span style="color: red">click</span>
+</SlotComponent>
+
+<NameSlot >
+  <template v-slot:header>
+<h1>  header content</h1>
+  </template>
+
+    <div> main content</div>
+  
+  
+  <template #footer>  <!-- #header = short form of v-slot:header -->
+    <div> footer content</div>
+  </template>
+</NameSlot>
+
+<PropSlot v-slot = "slotProps">
+  <div> hello world</div>
+  <div>{{ slotProps.text }}</div>
+
+</PropSlot>
+
+
+
+
 </template>
 
 
@@ -44,6 +70,9 @@ import WatchComponent from './components/WatchComponent.vue';
 import SinglePost from './components/SinglePost.vue';
 import ChildComponent from './components/ChildComponent.vue';
 import ParentComponent from './components/ParentComponent.vue';
+import SlotComponent from './components/SlotComponent.vue';
+import NameSlot from './components/NameSlot.vue';
+import PropSlot from './components/PropSlot.vue';
 const counter = ref(10);
 const counterData = reactive({
   count: 0,
