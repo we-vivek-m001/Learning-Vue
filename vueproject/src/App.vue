@@ -8,6 +8,30 @@
 <input type="text" v-model="counterTitle"/>
 
 
+<div>
+    <h1>Vue Router Example</h1>
+
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+<router-link 
+  :to="{ name: 'UserSingle', params: { id: 1 } }">
+  User 1
+</router-link>    </nav>
+
+    <hr />
+
+    <router-view />
+  </div>
+
+
+
+
+
+
+
+
+
 <!-- <TemplateSyntax/> 
 <ParentComponent/>
 <ComputedComponent/>
@@ -48,9 +72,10 @@
 
 </PropSlot>
 
-
-
-
+<HttpRequest/>
+<PostRequest/>
+<UpdateRequest/>
+<AxiosGet/>
 </template>
 
 
@@ -73,6 +98,10 @@ import ParentComponent from './components/ParentComponent.vue';
 import SlotComponent from './components/SlotComponent.vue';
 import NameSlot from './components/NameSlot.vue';
 import PropSlot from './components/PropSlot.vue';
+//import AxiosGet from './components/AxiosGet.vue';
+//import HttpRequest from './components/HttpRequest.vue';
+//import PostRequest from './components/PostRequest.vue';
+//import UpdateRequest from './components/UpdateRequest.vue';
 const counter = ref(10);
 const counterData = reactive({
   count: 0,
