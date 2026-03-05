@@ -71,11 +71,16 @@
   <div>{{ slotProps.text }}</div>
 
 </PropSlot>
-
+<mixinsComp/>
+<counter/>
 <HttpRequest/>
 <PostRequest/>
 <UpdateRequest/>
 <AxiosGet/>
+<UseCounterStore/>
+<counter/>
+
+
 </template>
 
 
@@ -102,6 +107,9 @@ import PropSlot from './components/PropSlot.vue';
 //import HttpRequest from './components/HttpRequest.vue';
 //import PostRequest from './components/PostRequest.vue';
 //import UpdateRequest from './components/UpdateRequest.vue';
+//import mixinsComp from './components/mixinsComp.vue';
+import { useCounterStore } from './components/stores/counter';
+import UseCounterStore from './components/UseCounterStore.vue';
 const counter = ref(10);
 const counterData = reactive({
   count: 0,
