@@ -1,0 +1,6 @@
+<template>
+  
+  about page
+
+
+    </template>
